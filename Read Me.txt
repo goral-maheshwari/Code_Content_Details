@@ -1,0 +1,24 @@
+This simple scripts helps you in identifying basic details about ur code/codebase.
+This tells you the number of lines of comments, code and empty lines
+From this you can easily decipher the readability of your code
+
+ To Run: ruby get_content_details.rb <absolute_folder_path or absolute_file_path>
+Some Assumptions
+	1) if a line has both code and comment its counted in both
+	2) If a blank line is in comment block, it will be counted as comment line
+	3) will not take care  of script in html or embedded commets
+
+*** You can easily add any other file type ***
+just add the details in language_config.rb
+You need to add 3 things
+1) In "Formats" add the constant and file extension
+2) In "FormatNames" add the key and its corresopnding file type name as you would like it
+3) In "COMMENT_REGEX_IN_FORMATS" comment structure in key value pair 
+
+
+SAMPLE OUTPUT
+Ruby     -   255 files  -  2567 blank lines - 245 comment lines - 34567 code lines
+YAML    -   155 files  -  357 blank lines - 425 comment lines - 24002 code lines
+JS         -   245 files  -  4517 blank lines - 235 comment lines - 32090 code lines
+HTML    -   305 files  -  1527 blank lines - 306 comment lines - 41087 code lines
+CSS       -   125 files  -  1537 blank lines - 134 comment lines - 15678 code lines
